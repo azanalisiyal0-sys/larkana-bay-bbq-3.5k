@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-main);
+    scroll-behavior: smooth;
+}
+
+:root {
+  /* BACKGROUNDS */
+  --bg-main: #0D0D0D;
+  --bg-secondary: #161616;
+
+  /* PRIMARY ACCENTS */
+  --fire-red: #D62828;
+  --flame-orange: #F77F00;
+  --warm-gold: #FCBF49;
+
+  /* SUPPORT COLORS */
+  --ocean-night: #1B263B;
+  --smoke-gray: #9A8C98;
+
+  /* TEXT */
+  --text-main: #F5F5F5;
+}
+
+.header {
+    background: var(--bg-secondary);
+    border-bottom: 2px solid var(--fire-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20%;
+}
+
+.logo {
+  width: 30vw;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  background-color: var(--bg-main);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-main);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--flame-orange);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+.hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.featured-dishes {
+  gap: 50px;
+}
+
+.dish-card {
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  overflow: hidden;
+  border: var(--flame-orange);
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 15px rgba(247, 127, 0, 0.4);
+}
+
+.dish-card img {
+  width: 50%;
+  display: block;
+}
+
+.dish-card img:hover {
+  filter: brightness(1.1);
+}
+
+h1, h2, h3 {
+  color: var(--warm-gold);
+  transition: 0.3s;
+}
+
+h1:hover{
+  text-shadow: 0 0 10px var(--flame-orange);
+}
+
+h2:hover{
+  text-shadow: 0 0 10px var(--flame-orange);
+}
+
+h3:hover{
+  text-shadow: 0 0 10px var(--flame-orange);
+}
+
+p {
+  color: var(--smoke-gray);
+  line-height: 1.7;
+}
+
+.about {
+    color: var(--smoke-gray);
+    line-height: 1.7;
+}
+
+.btn {
+  background: linear-gradient(
+    90deg,
+    var(--fire-red),
+    var(--flame-orange)
+  );
+
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 20px rgba(247,127,0,0.5);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-us {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.contact-us button {
+  background: linear-gradient(
+    90deg,
+    var(--fire-red),
+    var(--flame-orange)
+  );
+
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 20px rgba(247,127,0,0.5);
+}
+
+form label {
+  color: var(--smoke-gray);
+  font-weight: bold;
+}
+
+input,
+textarea {
+  background-color: #1E1E1E;
+  color: var(--text-main);
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  padding: 12px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+
+  border-color: var(--flame-orange);
+
+  box-shadow:
+    0 0 10px rgba(247,127,0,0.4);
+}
+
+footer {
+  background-color: var(--bg-secondary);
+
+  border-top: 1px solid #222;
+
+  color: var(--smoke-gray);
+}
+
+.logo{
+    transition: all 0.4s ease;
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+.logo:hover{
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px #D62828)
+            drop-shadow(0 0 20px #F77F00);
+}
+
+@keyframes floatLogo{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-6px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+/* Allignment */
+
+.menu-main-tagline {
+  text-align: center;
+}
+
+.menu-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-main {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+}
+
+.last-tagline {
+  text-align: center;
+}
+
+.about-content {
+  gap: 20px;
+  padding: 30px;
+}
+
+
